@@ -1,0 +1,38 @@
+:host {
+  .container {
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    .editor {
+      display: flex;
+      font-family: inherit;
+      font-size: 14px;
+      line-height: 21px;
+      height: fit-content;
+      overflow: auto;
+      .line-numbers {
+        padding: 0px 10px 0px 10px;
+        text-align: right;
+        background-color: #f6f6f6;
+        height: fit-content;
+        min-height: 100%;
+        .number::before {
+          color: #506882;
+        }
+      }
+      textarea {
+        line-height: 21px;
+        border: 0;
+        color: black;
+        min-width: 500px;
+        outline: none;
+        resize: none;
+        width: 100%;
+        padding-left: 8px;
+        height: auto;
+      }
+    }
+    &.focus {
+      border: 1px solid rgb(70, 168, 242) !important;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<div class="container" [ngClass]="{ focus: isFocused }" [style.width]="width">
+  <div class="editor" [style.height]="height">
+    <div class="line-numbers">
+      <div *ngFor="let i of lines" class="number">
+        {{ i }}
+      </div>
+    </div>
+    <textarea
+      #textarea
+      [placeholder]="placeholder"
+      [(ngModel)]="text"
+      (focus)="onTextareaFocus()"
+      (blur)="onTextareaBlur()"
+      [style.color]="color"
+    ></textarea>
+  </div>
+</div>
